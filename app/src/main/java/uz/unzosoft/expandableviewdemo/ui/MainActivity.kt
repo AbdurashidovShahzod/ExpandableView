@@ -1,9 +1,8 @@
 package uz.unzosoft.expandableviewdemo.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ExpandableListView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.unzosoft.expandableviewdemo.R
@@ -22,15 +21,18 @@ class MainActivity : AppCompatActivity() {
         adapter = MyExpandableAdapter(listTitle, map)
         expandableListView.setAdapter(adapter)
 
-//        expandableListView.setOnChildClickListener { _, _, groupPosition, childPosition, _ ->
+        expandableListView.setOnChildClickListener { _, _, groupPosition, childPosition, _ ->
+            val intent = Intent(this, ResultActivity1::class.java)
+            val get = map[listTitle[groupPosition]]?.get(childPosition)
+            intent.putExtra("get", get)
 //            Toast.makeText(
 //                this,
 //                map[listTitle[groupPosition]]?.get(childPosition),
 //                Toast.LENGTH_SHORT
 //            ).show()
-//            true
-//
-//        }
+            startActivity(intent)
+            true
+        }
 
 
 //        expandableListView.setOnGroupCollapseListener {
@@ -59,6 +61,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }
 
+
         expandableListView.setOnGroupExpandListener { groupPosition ->
             if (lastPosition != -1 && groupPosition != lastPosition) {
                 expandableListView.collapseGroup(lastPosition)
@@ -71,24 +74,24 @@ class MainActivity : AppCompatActivity() {
 
     private fun initData() {
         map = HashMap()
-        val spainList = arrayListOf(
-            "Barcelona", "Real Madrid",
-            "Atletico Madrid", "Seveliya", "Valencia"
+        val fruitsList = arrayListOf(
+            "Apple", "Mango",
+            "Banana", "Melon"
         )
-        val englandList = arrayListOf(
-            "Man city", "Man united",
-            "Liverpool", "Chelsea", "Totenham"
+        val flowersList = arrayListOf(
+            "Atirgul", "Lola",
         )
-        val italyList = arrayListOf("Milan", "Inter", "Juventus", "Roma", "Jenoa")
-        val uzbekList = arrayListOf("Pakxtakor", "Bunyodkor", "Qizilqum", "Nasaf")
-        map["Spain"] = spainList
-        map["England"] = englandList
-        map["Italy"] = italyList
-        map["Uzbek"] = uzbekList
-        listTitle.add("Spain")
-        listTitle.add("England")
-        listTitle.add("Italy")
-        listTitle.add("Uzbek")
+        val animalsList = arrayListOf("Sher", "Bo'ri", "Quyon")
+        val birdsList = arrayListOf("Kaptar", "Kaklik", "Bedana")
+        map["Fruits"] = fruitsList
+        map["Flowers"] = flowersList
+        map["Animals"] = animalsList
+        map["Birds"] = birdsList
+        listTitle.add("Fruits")
+        listTitle.add("Flowers")
+        listTitle.add("Animals")
+        listTitle.add("Birds")
     }
 
 }
+
