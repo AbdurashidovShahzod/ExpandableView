@@ -13,11 +13,11 @@
         <EditText
             android:id="@+id/tvChild"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:editable="false"
             android:padding="10dp"
             android:text="@string/app_name"
             android:textSize="20sp"
-            android:editable="false"
             android:textStyle="normal" />
     </LinearLayout>
 
