@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#69C3CE"
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvChild"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:padding="10dp"
-        android:text="@string/app_name"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:layout_marginLeft="18dp"
+        android:background="#69C3CE"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_android" />
+
+        <TextView
+            android:id="@+id/tvChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textColor="#3702B4"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
 </LinearLayout>
