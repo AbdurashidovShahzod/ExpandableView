@@ -13,6 +13,7 @@ class ResultActivity1 : AppCompatActivity() {
         setContentView(R.layout.activity_result1)
         val extras = intent.extras
 
+
         when (val getName = extras?.getString("get")) {
             "Apple" -> {
                 tvSimple.text = getName

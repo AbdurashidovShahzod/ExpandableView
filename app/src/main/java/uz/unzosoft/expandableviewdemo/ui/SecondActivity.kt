@@ -1,5 +1,6 @@
 package uz.unzosoft.expandableviewdemo.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_second.*
@@ -19,7 +20,13 @@ class SecondActivity : AppCompatActivity() {
         initData()
         adapter = MyExpandableAdapterTechnicals(listTitle, map)
         expandableTechnicalListView.setAdapter(adapter)
-
+        expandableTechnicalListView.setOnChildClickListener { _, _, i, i2, _ ->
+            val intent = Intent(this, TechnicalResultActivity::class.java)
+            val get = map[listTitle[i]]?.get(i2)
+            intent.putExtra("get", get)
+            startActivity(intent)
+            true
+        }
     }
 
 
@@ -38,7 +45,6 @@ class SecondActivity : AppCompatActivity() {
             arrayListOf("Home audion speaker", "Home theatres", "Bluetooth speakers")
         val tvList = arrayListOf("Lg", "Samsung")
         val kitchenList = arrayListOf("Smart fryer", "Microwave")
-
 
         map = HashMap()
         map["Mobiles"] = mobilesList
