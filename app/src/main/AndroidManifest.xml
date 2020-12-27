@@ -11,16 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpandableViewDemo">
-        <activity android:name=".ui.TechnicalResultActivity"></activity>
-        <activity android:name=".ui.ResultActivity1" />
-        <activity android:name=".ui.SecondActivity">
+        <activity android:name=".todo.AddTodoActivity"></activity>
+        <activity android:name=".todo.MainTodoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.TechnicalResultActivity" />
+        <activity android:name=".ui.ResultActivity1" />
+        <activity android:name=".ui.SecondActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>
