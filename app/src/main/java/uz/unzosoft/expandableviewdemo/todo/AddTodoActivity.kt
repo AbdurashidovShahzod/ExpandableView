@@ -38,24 +38,7 @@ class AddTodoActivity : AppCompatActivity() {
         map["To do degree"] = todoList
         titleList.add("To do degree")
 
-//        map = HashMap()
-//        val fruitsList = arrayListOf(
-//            "Apple", "Mango",
-//            "Banana", "Melon"
-//        )
-//        val flowersList = arrayListOf(
-//            "Atirgul", "Lola",
-//        )
-//        val animalsList = arrayListOf("Sher", "Bo'ri", "Quyon")
-//        val birdsList = arrayListOf("Kaptar", "Kaklik", "Bedana")
-//        map["Fruits"] = fruitsList
-//        map["Flowers"] = flowersList
-//        map["Animals"] = animalsList
-//        map["Birds"] = birdsList
-//        titleList.add("Fruits")
-//        titleList.add("Flowers")
-//        titleList.add("Animals")
-//        titleList.add("Birds")
+
     }
 
 }
