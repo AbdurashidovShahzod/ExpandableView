@@ -75,26 +75,24 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nameBtn" />
 
-        <LinearLayout
-            android:id="@+id/ll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+        <ExpandableListView
+            android:id="@+id/expandableListTodo"
+            android:layout_width="324dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_shape"
+            android:gravity="left|center"
+            android:hint="To do degree"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:transitionGroup="true"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/descriptionBtn">
 
-            <ExpandableListView
-                android:id="@+id/expandableListViewTodo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/descriptionBtn">
-
-            </ExpandableListView>
-        </LinearLayout>
+        </ExpandableListView>
 
         <EditText
             android:id="@+id/dataBtn"
@@ -110,7 +108,7 @@
             android:textStyle="normal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll" />
+            app:layout_constraintTop_toBottomOf="@id/expandableListTodo" />
 
         <EditText
             android:id="@+id/dedlineBtn"
